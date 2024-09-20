@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="/Stylesheets/contact.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Portfolio</h2>
+      <ul class="nav">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+        <li><a href="skills.html" id="skills">Skills</a></li>
+        <li><a href="projects.html" id="project">Projects</a></li>
+        <li><a href="contact.html" id="contact">Contact Me</a></li>
+      </ul>
+    </div>
+    <h2 class="about-me">Contact <span>Me.</span></h2>
+    <div class="body-content">
+      <form action="#">
+        <input type="text" placeholder="Enter FullName" required />
+        <input type="email" placeholder="Enter Email" required />
+        <textarea name="comments" placeholder="Comments" required></textarea>
+        <input type="submit" placeholder="Submit" id="btn" />
+      </form>
+    </div>
+    <script>
+      function clickevent() {
+        window.location.href = "about.html";
+      }
+      // 9CA3AF
+      const path = window.location.pathname;
+      const route = path.substring(path.lastIndexOf("/") + 1);
+      //console.log(route);
+
+      const about = document.getElementById("about");
+      const home = document.getElementById("home");
+      const contact = document.getElementById("contact");
+      const skills = document.getElementById("skills");
+      const project = document.getElementById("project");
+
+      if (route === "skills.html") {
+        skills.style.color = "white";
+      } else if (route === "about.html") {
+        about.style.color = "white";
+      } else if (route === "contact.html") {
+        contact.style.color = "white";
+      } else if (route === "index.html") {
+        home.style.color = "white";
+      } else if (route === "projects.html") {
+        project.style.color = "white";
+      }
+    </script>
+  </body>
+</html>

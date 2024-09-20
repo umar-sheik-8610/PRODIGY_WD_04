@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Page</title>
+    <link rel="stylesheet" href="/Stylesheets/project.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Portfolio</h2>
+      <ul class="nav">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+        <li><a href="skills.html" id="skills">Skills</a></li>
+        <li><a href="projects.html" id="project">Projects</a></li>
+        <li><a href="contact.html" id="contact">Contact Me</a></li>
+      </ul>
+    </div>
+    <h2 class="about-me"><span>My </span>Projects</h2>
+    <div class="body-container">
+      <div class="body-content">
+        <div class="project-container">
+          <h1>Full Stack Dev</h1>
+          <div class="content">
+            <h2>Workout Schedule App With Authentication</h2>
+            <p>
+              Developed a workout schedule app using the MERN stack MongoDB,
+              Express, React, Node.js with JWT-based authentication for secure
+              user login and management. Implemented features for creating,
+              updating, and tracking workout routines.
+            </p>
+          </div>
+          <div class="content">
+            <h2>Blogging Web App</h2>
+            <p>
+              Developed a full-stack blogging app using Node.js, Express, and
+              MongoDB with RESTful APIs and dynamic content rendering.
+              Implemented features for creating, updating, and managing blog
+              posts.
+            </p>
+          </div>
+        </div>
+        <div class="project-container">
+          <h1>Web Application</h1>
+          <div class="content">
+            <h2>Weather App</h2>
+            <p>
+              Developed a responsive Weather App using React with a clean,
+              intuitive UI. Integrated a third-party API to fetch accurate
+              weather data for any location. Displayed real-time weather
+              information, including temperature, humidity, and forecast.
+            </p>
+          </div>
+          <div class="content">
+            <h2>BMI Calculator</h2>
+            <p>
+              Built a user-friendly BMI calculator with a simple interface.
+              Designed to help users easily calculate their Body Mass Index
+              based on inputted height and weight. Provided instant feedback on
+              BMI category, including underweight, normal, overweight, or obese.
+            </p>
+          </div>
+          <div class="content">
+            <h2>QR Code Generator</h2>
+            <p>
+              Created a versatile QR code generator with customizable features.
+              Enabled users to generate custom QR codes for URLs, text, and
+              more. Integrated options for adjusting size, color, and design to
+              fit various needs.
+            </p>
+          </div>
+        </div>
+        <div class="project-container">
+          <h1>GUI Application</h1>
+          <div class="content">
+            <h2>Employee Management</h2>
+            <p>
+              Developed an Employee Management System with full CRUD operations.
+              Built using Python and SQLite for efficient data handling and
+              storage. Provided a user-friendly interface for managing employee
+              records and tasks.
+            </p>
+          </div>
+          <div class="content">
+            <h2>Snake Game</h2>
+            <p>
+              Implemented a classic Snake Game in Java, capturing a nostalgic
+              gaming experience. Designed with smooth controls and retro visuals
+              for an authentic feel. Includes increasing difficulty levels to
+              challenge players as they progress.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function clickevent() {
+        window.location.href = "about.html";
+      }
+      // 9CA3AF
+      const path = window.location.pathname;
+      const route = path.substring(path.lastIndexOf("/") + 1);
+      console.log(route);
+
+      const about = document.getElementById("about");
+      const home = document.getElementById("home");
+      const contact = document.getElementById("contact");
+      const skills = document.getElementById("skills");
+      const project = document.getElementById("project");
+
+      if (route === "skills.html") {
+        skills.style.color = "white";
+      } else if (route === "about.html") {
+        about.style.color = "white";
+      } else if (route === "contact.html") {
+        contact.style.color = "white";
+      } else if (route === "index.html") {
+        home.style.color = "white";
+      } else if (route === "projects.html") {
+        project.style.color = "white";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+    <link rel="stylesheet" href="/Stylesheets/about.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Portfolio</h2>
+      <ul class="nav">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+        <li><a href="skills.html" id="skills">Skills</a></li>
+        <li><a href="projects.html" id="project">Projects</a></li>
+        <li><a href="contact.html" id="contact">Contact Me</a></li>
+      </ul>
+    </div>
+    <h2 class="about-me">About<span>Me.</span></h2>
+    <div class="body-content">
+      <p>
+        As a final year computer science student at Sri Manakula Vinayagar
+        Engineering College, I am driven by a deep passion for technology and
+        innovation. My academic journey has been marked by a commitment to
+        mastering the complexities of computer science, with a special focus on
+        web development. With hands-on experience in creating dynamic and
+        responsive web applications, I have honed my skills using React and the
+        MERN stack (MongoDB, Express.js, React, Node.js). This expertise allows
+        me to develop cutting-edge solutions that meet the evolving needs of
+        users and businesses alike.
+      </p>
+      <p>
+        Beyond my web development capabilities, I am a dedicated Java enthusiast
+        with a strong foundation in Java programming. My journey with Java has
+        been enriched by my active participation in coding competitions, where I
+        have sharpened my algorithmic thinking and problem-solving abilities.
+        Whether it's building scalable applications or solving intricate coding
+        challenges, I thrive on leveraging Java's power to create robust and
+        efficient solutions. My enthusiasm for coding is fueled by a desire to
+        push the boundaries of what's possible, constantly seeking new ways to
+        innovate and improve.
+      </p>
+      <p>
+        To further elevate my expertise, I am currently pursuing a Java Full
+        Stack Development certification with CodeBuilders EdTech. This program
+        is providing me with a comprehensive understanding of full-stack
+        development, enhancing my ability to tackle complex projects from both
+        the front-end and back-end perspectives. I am eager to apply this
+        knowledge to real-world scenarios, contributing to projects that require
+        a deep understanding of both web development and Java-based solutions.
+        As I continue to grow in my career, I am excited about the opportunities
+        to collaborate with like-minded professionals and bring innovative ideas
+        to life. Let's connect and explore how we can work together to create
+        impactful solutions in the ever-evolving tech landscape.
+      </p>
+    </div>
+    <script>
+      function clickevent() {
+        window.location.href = "about.html";
+      }
+      // 9CA3AF
+      const path = window.location.pathname;
+      const route = path.substring(path.lastIndexOf("/") + 1);
+      console.log(route);
+
+      const about = document.getElementById("about");
+      const home = document.getElementById("home");
+      const contact = document.getElementById("contact");
+      const skills = document.getElementById("skills");
+      const project = document.getElementById("project");
+
+      if (route === "skills.html") {
+        skills.style.color = "white";
+      } else if (route === "about.html") {
+        about.style.color = "white";
+      } else if (route === "contact.html") {
+        contact.style.color = "white";
+      } else if (route === "index.html") {
+        home.style.color = "white";
+      } else if (route === "projects.html") {
+        project.style.color = "white";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/Stylesheets/index.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Portfolio</h2>
+      <ul class="nav">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+        <li><a href="skills.html" id="skills">Skills</a></li>
+        <li><a href="projects.html" id="project">Projects</a></li>
+        <li><a href="contact.html" id="contact">Contact Me</a></li>
+      </ul>
+    </div>
+    <div class="body-content">
+      <div class="content">
+        <h3>Hello, Welcome</h3>
+        <h2>I m Thomas Shelby</h2>
+        <p>
+          Passionate Web Developer with expertise in frontend and backend
+          technologies. Proficient in web development using Node.js, Python, and
+          databases like MongoDB and MySQL. Committed to creating responsive,
+          user-friendly, and efficient web applications that deliver exceptional
+          user experiences.
+        </p>
+        <button onclick="clickevent()" id="btn">Contact us</button>
+      </div>
+      <div class="image">
+        <img
+          src="Assets/Profile1.jpg"
+          alt="Profile"
+          height="427px"
+          width="427px"
+        />
+      </div>
+    </div>
+    <script>
+      function clickevent() {
+        window.location.href = "contact.html";
+      }
+      // 9CA3AF
+      const path = window.location.pathname;
+      const route = path.substring(path.lastIndexOf("/") + 1);
+      console.log(route);
+
+      const about = document.getElementById("about");
+      const home = document.getElementById("home");
+      const contact = document.getElementById("contact");
+      const skills = document.getElementById("skills");
+      const project = document.getElementById("project");
+
+      if (route === "skills.html") {
+        skills.style.color = "white";
+      } else if (route === "about.html") {
+        about.style.color = "white";
+      } else if (route === "contact.html") {
+        contact.style.color = "white";
+      } else if (route === "index.html") {
+        home.style.color = "white";
+      } else if (route === "projects.html") {
+        project.style.color = "white";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Page</title>
+    <link rel="stylesheet" href="/Stylesheets/skills.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Portfolio</h2>
+      <ul class="nav">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="about">About</a></li>
+        <li><a href="skills.html" id="skills">Skills</a></li>
+        <li><a href="projects.html" id="project">Projects</a></li>
+        <li><a href="contact.html" id="contact">Contact Me</a></li>
+      </ul>
+    </div>
+    <h2 class="about-me"><span>My </span>Skills</h2>
+    <div class="body-content">
+      <div class="skill">
+        <h2>MERN Stack</h2>
+        <p>
+          I am highly skilled in the MERN stack, with expertise in developing
+          robust full-stack web applications using MongoDB, Express.js, React,
+          and Node.js. I excel in creating dynamic, scalable, and responsive
+          applications, seamlessly integrating front-end and back-end
+          technologies.
+        </p>
+      </div>
+      <div class="skill">
+        <h2>Git and GitHub</h2>
+        <p>
+          I am proficient in Git and GitHub, with expertise in version control,
+          branching strategies, and collaborative development workflows. I excel
+          at managing repositories, handling pull requests, and ensuring
+          seamless code integration in team projects.
+        </p>
+      </div>
+      <div class="skill">
+        <h2>Database Management Systems</h2>
+        <p>
+          I have a strong command of Database Management Systems (DBMS), with
+          expertise in designing, managing, and optimizing relational databases.
+          I excel in writing complex SQL queries, ensuring data integrity, and
+          implementing efficient database architectures.
+        </p>
+      </div>
+      <div class="skill">
+        <h2>Networking</h2>
+        <p>
+          I possess expertise in networking, with a solid understanding of
+          network protocols, architecture, and security principles. I excel in
+          configuring and managing networks, ensuring efficient data
+          communication and maintaining robust network infrastructure.
+        </p>
+      </div>
+      <div class="skill">
+        <h2>Java</h2>
+        <p>
+          I am highly skilled in Java, with extensive experience in
+          object-oriented programming, building robust applications, and
+          optimizing performance. I excel in developing scalable solutions,
+          implementing design patterns, and participating in competitive coding
+          challenges.
+        </p>
+      </div>
+    </div>
+    <script>
+      function clickevent() {
+        window.location.href = "about.html";
+      }
+      // 9CA3AF
+      const path = window.location.pathname;
+      const route = path.substring(path.lastIndexOf("/") + 1);
+      console.log(route);
+
+      const about = document.getElementById("about");
+      const home = document.getElementById("home");
+      const contact = document.getElementById("contact");
+      const skills = document.getElementById("skills");
+      const project = document.getElementById("project");
+
+      if (route === "skills.html") {
+        skills.style.color = "white";
+      } else if (route === "about.html") {
+        about.style.color = "white";
+      } else if (route === "contact.html") {
+        contact.style.color = "white";
+      } else if (route === "index.html") {
+        home.style.color = "white";
+      } else if (route === "projects.html") {
+        project.style.color = "white";
+      }
+    </script>
+  </body>
+</html>
